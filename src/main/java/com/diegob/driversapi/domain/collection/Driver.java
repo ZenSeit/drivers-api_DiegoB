@@ -26,4 +26,11 @@ public class Driver {
     @NotNull
     private String email;
     private List<Car> rentedCars = new ArrayList<>();
+
+    public Driver(String name, String lastName, int age, String email) {
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
+        this.email = email;
+    }
 }
