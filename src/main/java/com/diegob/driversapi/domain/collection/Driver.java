@@ -33,4 +33,9 @@ public class Driver {
         this.age = age;
         this.email = email;
     }
+
+    public Driver prueba(Car car){
+        this.rentedCars.add(car);
+        return this;
+    }
 }

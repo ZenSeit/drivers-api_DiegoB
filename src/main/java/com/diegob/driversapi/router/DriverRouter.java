@@ -1,5 +1,6 @@
 package com.diegob.driversapi.router;
 
+import com.diegob.driversapi.domain.car.Car;
 import com.diegob.driversapi.domain.dto.DriverDTO;
 import com.diegob.driversapi.usecases.*;
 import org.springframework.context.annotation.Bean;
