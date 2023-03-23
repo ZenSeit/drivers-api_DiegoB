@@ -22,9 +22,6 @@ public class AddCarToDriverUseCase implements AddCarList {
     @Override
     public Mono<DriverDTO> addCar(String idDriver, Car car) {
 
-        System.out.println(idDriver);
-        System.out.println(car);
-
         return driverRepository
                 .findById(idDriver)
                 .switchIfEmpty(Mono.error(new Throwable("Driver not found")))

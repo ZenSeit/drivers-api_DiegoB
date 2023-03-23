@@ -47,8 +47,8 @@ class SaveDriverUseCaseTest {
         var response = saveDriverUseCase.save(mapper.map(driver, DriverDTO.class));
 
         StepVerifier.create(response)
-                //.expectNext(mapper.map(driver, DriverDTO.class))
-                .expectNextCount(1)
+                //.expectNext(mapper.map(driver, DriverDTO.class)).
+                .expectNextMatches(d->d.getName().equals("Cristiano"))
                 .verifyComplete();
 
         Mockito.verify(repository).save(ArgumentMatchers.any(Driver.class));
